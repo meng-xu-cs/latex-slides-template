@@ -1,0 +1,30 @@
+\documentclass{beamer}
+\usetheme{Frankfurt}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\AtBeginSection[] {
+    \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection,hideallsubsections]
+    \end{frame}
+}
+
+% common packages
+\include{pkgs}
+
+% utility commands
+\input{cmds}
+\input{rev}
+\newcommand{\sys}{\mbox{\textsc{DieHard}}\xspace}
+
+% title
+\input{target/title}
+\input{hdr}
+
+\begin{document}
+
+\frame[plain]{\titlepage}
+\input{target/content}
+
+\end{document}
